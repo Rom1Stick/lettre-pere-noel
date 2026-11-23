@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0e1512">
+  <meta name="description" content="Une lettre au Père Noël, à vérifier preuve par preuve. Trois idées pour l'atelier, si le registre le permet.">
+  <meta property="og:title" content="Audience de sagesse">
+  <meta property="og:description" content="Une lettre au Père Noël. Sept preuves, un score, et trois pistes pour l'atelier — seulement si le registre les autorise.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <title>Audience de sagesse — lettre au Père Noël</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%238f2c2c'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-size='11' fill='%23f3eadb' font-family='Georgia'%3EPN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,560;0,9..144,660;1,9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      if (JSON.parse(sessionStorage.getItem("audience-sagesse-v1") || "{}").open) {
+        document.documentElement.classList.add("is-open");
+      }
+    } catch (error) {}
+  </script>
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <a class="skip" href="#lettre">Aller à la lettre</a>
+
+  <header class="hero" id="accueil">
+    <p class="kicker">Bureau des registres · Noël 2026</p>
+    <h1>Audience <em>de sagesse</em></h1>
+    <p class="lede">Une lettre à vérifier,<br>pas une liste à expédier.</p>
+    <p class="role">Si ce lien est arrivé jusqu’à vous, la hotte est entre vos mains. Vous tenez le rôle du Père Noël. Le dossier se lit en dessous, preuve après preuve.</p>
+    <p class="santa-line" id="santa-line">C’est moi. Je descends lire.</p>
+    <button class="seal" id="seal" type="button">
+      <span class="seal-mark" aria-hidden="true">PN</span>
+      <span class="seal-year" aria-hidden="true">2026</span>
+      <span class="visually-hidden">Ouvrir l’audience en tant que Père Noël</span>
+    </button>
+    <p class="seal-caption" id="seal-caption">Poser la main sur le sceau.</p>
+  </header>
+
+  <div class="dossier" id="dossier">
+    <main>
+      <article class="paper letter" id="lettre" data-reveal>
+        <p class="piece">Pièce n°&nbsp;1 · La lettre</p>
+        <h2>À lire avant de croire</h2>
+        <p>Père Noël,</p>
+        <p>On a failli vous envoyer trois liens et une phrase polie. Ça aurait été plus court. Ça aurait aussi été un peu sec, pour quelqu’un qui passe l’année à faire la différence entre une envie et une bonne raison.</p>
+        <p>Alors voici un dossier. Pas une commande. Une audience.</p>
+        <p>On dit qu’on a été sages. Pas sages comme on le raconte pour se faire bien voir&nbsp;: sages comme une maison qui éteint, une voiture qui se gare droit, un sol qu’on ne laisse pas devenir une légende, et une voix qu’on a décrochée quand il le fallait. Il y a aussi un chocolat qui n’aurait pas dû finir si vite. On vous le laisse juger, y compris ça.</p>
+        <p>Chaque preuve se vérifie d’un geste. Vous pouvez en croire certaines et en laisser d’autres. Le registre compte devant vous. Rien n’est pré-coché.</p>
+        <p>La règle tient en quatre lignes. En dessous de 45, les enveloppes restent fermées. De 45 à 69, une seule piste s’ouvre&nbsp;: celle que vous avez le plus constatée. De 70 à 84, les deux meilleures. À partir de 85, les trois. Avouer le chocolat n’offre rien en soi. Ça peut seulement faire franchir un palier, parce que la franchise pèse plus lourd qu’une auréole inventée.</p>
+        <p>Si quelque chose s’ouvre, ce sont des idées pour l’atelier. Des indices, au cas où vous chercheriez encore. Vous pouvez les retenir dans la hotte, ou trouver mieux. Le dernier mot ne quitte pas le traîneau.</p>
+        <p class="signature">Alexis, pour la maison</p>
+      </article>
+
+      <section class="proofs" id="preuves" aria-labelledby="preuves-title">
+        <div class="section-head" data-reveal>
+          <p class="piece">Pièce n°&nbsp;2 · Les preuves</p>
+          <h2 id="preuves-title">Sept gestes, pas un serment</h2>
+          <p class="section-lead">Chaque fiche se suffit. Le score n’attend pas que vous soyez indulgent. Il attend que vous ayez vu.</p>
+        </div>
+
+        <article class="proof paper" id="preuve-lumiere" data-reveal>
+          <header>
+            <p class="index">01 · Maison · 12&nbsp;points</p>
+            <p class="stamp" id="stamp-lumiere" hidden>Vu.</p>
+          </header>
+          <h3>On éteint.</h3>
+          <p>Pas par vertu affichée. Parce qu’une pièce vide n’a pas besoin d’être allumée, et qu’on finit par y retourner quand on a oublié. Ce n’est pas grand. C’est régulier.</p>
+          <div class="light-row">
+            <span class="window" aria-hidden="true"><i></i></span>
+            <button class="switch" id="switch" type="button" aria-pressed="false">
+              <span class="switch-ui" aria-hidden="true"><i></i></span>
+              <span id="switch-label">La pièce est allumée. L’éteindre.</span>
+            </button>
+          </div>
+          <p class="status" id="status-lumiere" aria-live="polite"></p>
+        </article>
+
+        <article class="proof paper" id="preuve-creneau" data-reveal>
+          <header>
+            <p class="index">02 · Route · 14&nbsp;points</p>
+            <p class="stamp" id="stamp-creneau" hidden>Aligné.</p>
+          </header>
+          <h3>On se gare droit, même la nuit.</h3>
+          <p>La rue est étroite, l’heure est mauvaise, et personne ne distribue de médaille pour un créneau propre. On le fait quand même. On aimerait, certains soirs, que la nuit ait une mémoire — pas pour nous surveiller, pour nous défendre si quelqu’un d’autre conduit mal.</p>
+          <div class="street" id="street">
+            <span class="mark left" aria-hidden="true"></span>
+            <span class="mark right" aria-hidden="true"></span>
+            <button class="car" id="car" type="button" aria-describedby="creneau-help">
+              <svg viewBox="0 0 78 36" aria-hidden="true">
+                <rect x="4" y="12" width="70" height="16" rx="6" fill="currentColor"></rect>
+                <rect x="16" y="6" width="40" height="12" rx="4" fill="currentColor"></rect>
+                <circle cx="20" cy="30" r="4" fill="#1b1714"></circle>
+                <circle cx="58" cy="30" r="4" fill="#1b1714"></circle>
+              </svg>
+              <span class="visually-hidden">Voiture à placer entre les lignes</span>
+            </button>
+          </div>
+          <p class="help" id="creneau-help">Glisser la voiture entre les lignes, ou la garer d’un bouton. Flèches du clavier, puis Entrée, si vous préférez.</p>
+          <div class="actions">
+            <button class="action" id="park-easy" type="button">La garer droit</button>
+          </div>
+          <p class="status" id="status-creneau" aria-live="polite"></p>
+        </article>
+
+        <article class="proof paper" id="preuve-sol" data-reveal>
+          <header>
+            <p class="index">03 · Maison · jusqu’à 14&nbsp;points</p>
+            <p class="stamp" id="stamp-sol" hidden>Propre.</p>
+          </header>
+          <h3>Le balai est sorti plus souvent que le canapé.</h3>
+          <p>On ne prétend pas à un sol de musée. On prétend qu’on ne laisse pas les miettes fonder une civilisation. On ramasse, on passe, on recommence le lendemain comme si de rien n’était.</p>
+          <p class="help">Cinq miettes donnent 14&nbsp;points. Trois ou quatre en donnent 8. Le registre n’exige pas la vitrine.</p>
+          <div class="floor" id="floor">
+            <button class="crumb" type="button" style="left:12%;top:30%" data-crumb>Ramasser cette miette</button>
+            <button class="crumb" type="button" style="left:28%;top:58%" data-crumb>Ramasser cette miette</button>
+            <button class="crumb" type="button" style="left:46%;top:24%" data-crumb>Ramasser cette miette</button>
+            <button class="crumb" type="button" style="left:61%;top:62%" data-crumb>Ramasser cette miette</button>
+            <button class="crumb" type="button" style="left:74%;top:36%" data-crumb>Ramasser cette miette</button>
+            <span class="dustpan" aria-hidden="true"></span>
+          </div>
+          <p class="status" id="status-sol" aria-live="polite">0 miette sur 5.</p>
+        </article>
+
+        <article class="proof paper" id="preuve-oreille" data-reveal>
+          <header>
+            <p class="index">04 · Attention · 12&nbsp;points</p>
+            <p class="stamp" id="stamp-oreille" hidden>Entendu.</p>
+          </header>
+          <h3>On a décroché.</h3>
+          <p>Quelqu’un a eu besoin d’une voix, pas d’un conseil brillant. On a répondu. On est resté le temps qu’il fallait, sans le raconter ensuite comme un exploit.</p>
+          <button class="ear action" id="ear" type="button" style="--p:0">
+            <span>Écouter jusqu’au bout</span>
+          </button>
+          <p class="whisper" id="whisper" hidden>«&nbsp;Je suis là. Je ne raccroche pas.&nbsp;»</p>
+          <p class="status" id="status-oreille" aria-live="polite"></p>
+        </article>
+
+        <article class="proof paper" id="preuve-pages" data-reveal>
+          <header>
+            <p class="index">05 · Attention · 10&nbsp;points</p>
+            <p class="stamp" id="stamp-pages" hidden>Lu.</p>
+          </header>
+          <h3>On a lu, y compris quand l’écran proposait plus facile.</h3>
+          <p>Janvier avait promis un livre par semaine. Janvier est un mythomane. On a lu moins, mais on a lu vraiment&nbsp;: des pages entières, pas des bribes entre deux notifications. On aimerait un endroit qui prenne le parti de la page, au lieu d’un téléphone qui la combat.</p>
+          <div class="book" id="book" data-pages="0" aria-hidden="true">
+            <div class="page page-back"></div>
+            <div class="page page-a"></div>
+            <div class="page page-b"></div>
+          </div>
+          <div class="actions">
+            <button class="action" id="page-btn" type="button">Tourner la page</button>
+            <span class="count" id="page-count">0 / 2</span>
+          </div>
+          <p class="status" id="status-pages" aria-live="polite"></p>
+        </article>
+
+        <article class="proof paper" id="preuve-chocolat" data-reveal>
+          <header>
+            <p class="index">06 · Franchise · +16 ou −6</p>
+            <p class="stamp" id="stamp-chocolat" hidden>Franc.</p>
+          </header>
+          <h3>Le dernier carré n’était pas à nous seuls.</h3>
+          <p>Il restait un carré. Il avait un destin plus tard, peut-être partagé. Il a eu un destin plus rapide. On peut nier. Ce serait moins sage que le carré lui-même.</p>
+          <p class="help">Avouer donne 16&nbsp;points et aucun cadeau en propre. Nier en retire 6. Les deux restent écrits. Seule la franchise peut faire franchir le palier d’après.</p>
+          <div class="split">
+            <span class="chocolate" aria-hidden="true"></span>
+            <div class="actions">
+              <button class="action" id="confess" type="button">On avoue</button>
+              <button class="action secondary" id="deny" type="button">On nie</button>
+            </div>
+          </div>
+          <p class="status" id="status-chocolat" aria-live="polite"></p>
+        </article>
+
+        <article class="proof paper" id="preuve-priorite" data-reveal>
+          <header>
+            <p class="index">07 · Route · 12&nbsp;points</p>
+            <p class="stamp" id="stamp-priorite" hidden>Une fois.</p>
+          </header>
+          <h3>On a laissé passer.</h3>
+          <p>Une fois, nettement&nbsp;: quelqu’un était pressé, on ne l’était pas, on a fait signe. Les autres fois, on apprend encore. On ne met pas ça sur la liste pour se décorer. On le met parce que c’est vrai une fois, et qu’une fois vraie vaut mieux qu’une année inventée.</p>
+          <div class="yield" id="yield-scene">
+            <span class="yield-car mine">Nous</span>
+            <span class="yield-car other">Eux</span>
+          </div>
+          <div class="actions">
+            <button class="action" id="yield-btn" type="button">Laisser passer</button>
+          </div>
+          <p class="status" id="status-priorite" aria-live="polite"></p>
+        </article>
+      </section>
+
+      <section class="paper score-board" id="registre" data-reveal aria-labelledby="registre-title">
+        <p class="piece">Pièce n°&nbsp;3 · Le registre</p>
+        <h2 id="registre-title">Ce que les gestes pèsent</h2>
+        <p class="mention" id="mention">Le traîneau n’a pas encore assez lu.</p>
+        <p class="big-score"><span id="final-score">0</span><span class="outof">/&nbsp;100</span></p>
+        <p class="bonus" id="bonus-line"></p>
+        <ul class="tracks">
+          <li>
+            <span>Maison</span>
+            <span class="bar" aria-hidden="true"><i id="bar-maison"></i></span>
+            <span id="pts-maison">0</span>
+          </li>
+          <li>
+            <span>Route</span>
+            <span class="bar" aria-hidden="true"><i id="bar-route"></i></span>
+            <span id="pts-route">0</span>
+          </li>
+          <li>
+            <span>Attention</span>
+            <span class="bar" aria-hidden="true"><i id="bar-attention"></i></span>
+            <span id="pts-attention">0</span>
+          </li>
+          <li>
+            <span>Franchise</span>
+            <span class="bar" aria-hidden="true"><i id="bar-franchise"></i></span>
+            <span id="pts-franchise">0</span>
+          </li>
+        </ul>
+        <p class="rule">Le bonus de dossier complet, dix points, n’appartient à aucune piste. Il récompense seulement d’avoir tout regardé. Les montants de chaque piste décident, en cas d’égalité, laquelle s’ouvre en premier&nbsp;: à points égaux, la maison, puis la route, puis l’attention.</p>
+      </section>
+
+      <section class="atelier" id="atelier" aria-labelledby="atelier-title">
+        <div class="section-head" data-reveal>
+          <p class="piece">Pièce n°&nbsp;4 · L’atelier</p>
+          <h2 id="atelier-title">Trois pistes, si le registre les autorise</h2>
+          <p class="section-lead">Ce ne sont pas des ordres. Ce sont des indices pour emballer quelque chose de juste, au cas où la hotte aurait encore de la place. Les montants situent l’atelier. Ils ont été lus sur Amazon en écrivant cette lettre. La fiche fait foi. Rien n’est mis dans un panier.</p>
+        </div>
+
+        <article class="gift paper is-locked" data-track="route" data-reveal>
+          <div class="sealed-face">
+            <span class="mini-seal" aria-hidden="true">PN</span>
+            <h3>Piste route</h3>
+            <p>Encore scellée. Cette part du dossier ne pèse pas assez, ou un meilleur palier l’attend.</p>
+          </div>
+          <div class="gift-body" hidden>
+            <header class="gift-head">
+              <svg viewBox="0 0 78 40" aria-hidden="true">
+                <rect x="2" y="12" width="46" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+                <circle cx="24" cy="21" r="5" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+                <rect x="54" y="14" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+              </svg>
+              <p class="index">Pour les nuits qui ont déjà une conduite correcte</p>
+            </header>
+            <h3>Dashcam DEALAZOT X4</h3>
+            <p>Une caméra avant-arrière. 4K devant, 1080p derrière, vision de nuit, mode stationnement, grand angle, carte de 64&nbsp;Go déjà prévue, Wi-Fi et application pour revoir sans démonter la voiture.</p>
+            <p>Pourquoi celle-là&nbsp;: on se gare déjà droit, et on a déjà laissé passer. On aimerait que les nuits où ce n’est pas nous le problème aient un témoin. Ce n’est pas un jouet de tableau de bord. C’est de la mémoire pour la rue.</p>
+            <p class="price">Autour de 63&nbsp;€. Les lutins s’en sortiront sans vendre un renne.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://www.amazon.fr/dp/B0FJRV4NC9" target="_blank" rel="noopener noreferrer">Ouvrir la fiche</a>
+              <button class="action keep" type="button" data-keep="route">Retenir dans la hotte</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="gift paper is-locked" data-track="attention" data-reveal>
+          <div class="sealed-face">
+            <span class="mini-seal" aria-hidden="true">PN</span>
+            <h3>Piste attention</h3>
+            <p>Encore scellée. L’écoute et les pages n’ont pas encore assez compté.</p>
+          </div>
+          <div class="gift-body" hidden>
+            <header class="gift-head">
+              <svg viewBox="0 0 40 56" aria-hidden="true">
+                <rect x="4" y="2" width="32" height="52" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+                <path d="M12 16h16M12 22h16M12 28h10" stroke="currentColor" stroke-width="1.4"></path>
+              </svg>
+              <p class="index">Pour les soirs où la page devrait gagner</p>
+            </header>
+            <h3>Tablette Amazon Alexa 8</h3>
+            <p>Huit pouces et sept dixièmes, légère, 4&nbsp;Go de mémoire, 128&nbsp;Go, une journée de batterie, Google Play, et une lecture qui sait baisser les notifications. Elle est dessinée pour Alexa+, qui demande Prime pour vivre vraiment.</p>
+            <p>Pourquoi celle-là&nbsp;: on a décroché pour quelqu’un, et on a lu moins que promis mais vraiment. On voudrait un objet de chevet qui prend le parti du livre et du film calme, pas une télévision de plus, pas un téléphone qui réclame la main.</p>
+            <p class="price">Autour de 140&nbsp;€.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://www.amazon.fr/dp/B0FLB3B6TB" target="_blank" rel="noopener noreferrer">Ouvrir la fiche</a>
+              <button class="action keep" type="button" data-keep="attention">Retenir dans la hotte</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="gift paper is-locked" data-track="maison" data-reveal>
+          <div class="sealed-face">
+            <span class="mini-seal" aria-hidden="true">PN</span>
+            <h3>Piste maison</h3>
+            <p>Encore scellée. La lumière et le sol n’ont pas encore assez pesé.</p>
+          </div>
+          <div class="gift-body" hidden>
+            <header class="gift-head">
+              <svg viewBox="0 0 72 40" aria-hidden="true">
+                <rect x="2" y="8" width="18" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"></rect>
+                <circle cx="44" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+                <circle cx="44" cy="22" r="3" fill="currentColor"></circle>
+              </svg>
+              <p class="index">Pour les soirs où le balai a déjà donné</p>
+            </header>
+            <h3>Robot Tapo RV30 Max Turbo</h3>
+            <p>Il aspire, il lave, et il rentre vider lui-même sa poussière dans une station, jusqu’à une longue série de jours sans y penser. 25&nbsp;000&nbsp;Pa, navigation lidar, et une coupe des cheveux avant qu’ils fondent une colonie dans la brosse.</p>
+            <p>Pourquoi celui-là&nbsp;: on éteint déjà, et on ramasse déjà. On aimerait que les soirs fatigués ne rendent pas la maison à la poussière. Il ne remplace pas le geste. Il prend le relais quand le geste a assez travaillé.</p>
+            <p class="price">Autour de 200&nbsp;€. Le plus domestique des trois, et le plus sérieux.</p>
+            <div class="actions">
+              <a class="action secondary" href="https://www.amazon.fr/dp/B0HLG75WWV" target="_blank" rel="noopener noreferrer">Ouvrir la fiche</a>
+              <button class="action keep" type="button" data-keep="maison">Retenir dans la hotte</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="paper decision" id="decision" data-reveal aria-labelledby="decision-title">
+        <p class="piece">Pièce n°&nbsp;5 · La décision</p>
+        <h2 id="decision-title">Ce qui entre dans la hotte</h2>
+        <p id="decree-lead">Le registre est ouvert. Les preuves sont plus haut.</p>
+        <ul id="decree-list"></ul>
+        <p id="decree-end">La maison vous remercie d’avoir tenu le rôle. Le dernier mot reste le vôtre.</p>
+        <p class="signoff">Alexis, pour la maison · novembre 2026</p>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <p>Lettre écrite pour être lue une fois, par quelqu’un qui a une hotte. Les liens mènent aux fiches. Rien n’est affilié. Rien n’est commandé à votre place.</p>
+    </footer>
+  </div>
+
+  <aside class="meter" id="meter" aria-label="Registre en cours">
+    <p class="meter-score"><span id="live-score">0</span><small>/100</small></p>
+    <p class="meter-done" id="live-done">0 preuve tenue sur 7</p>
+    <p class="meter-line" id="live-line">Le dossier est encore scellé.</p>
+    <div class="meter-controls">
+      <button type="button" id="mute" aria-pressed="false">Son</button>
+      <button type="button" id="calm" aria-pressed="false">Calme</button>
+      <button type="button" id="reset">Recommencer</button>
+    </div>
+    <p class="visually-hidden" id="live-announce" aria-live="polite"></p>
+  </aside>
+
+  <noscript>
+    <p class="noscript paper">Sans JavaScript, le registre ne compte pas. La lettre, elle, reste au-dessus.</p>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
